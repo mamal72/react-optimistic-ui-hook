@@ -1,6 +1,6 @@
 {
   "name": "react-optimistic-ui-hook",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Minimal optimistic UI pattern implementation with a React hook",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
