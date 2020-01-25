@@ -35,12 +35,17 @@ import { useOptimisticUI } from 'react-optimistic-ui-hook'
 
 const USERNAME = 'mamal72'
 const PREDICTED_AVATAR_URL = 'https://avatars0.githubusercontent.com/u/810438?v=4'
+const DELAY_IN_MS = 2000
 
 async function getGithubAvatarURL(username: string): Promise<string> {
   const response = await fetch(`https://api.github.com/users/${username}`)
   const data = await response.json()
 
-  return data.avatar_url
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(data.avatar_url)
+    }, DELAY_MS);
+  })
 }
 
 export function GithubAvatar() {
