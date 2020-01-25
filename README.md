@@ -36,15 +36,15 @@ import { useOptimisticUI } from 'react-optimistic-ui-hook'
 const USERNAME = 'mamal72'
 const PREDICTED_AVATAR_URL = 'https://avatars0.githubusercontent.com/u/810438?v=4'
 
-async function getGithubAvatarURL(username: string): string {
+async function getGithubAvatarURL(username: string): Promise<string> {
   const response = await fetch(`https://api.github.com/users/${username}`)
   const data = await response.json()
-  
+
   return data.avatar_url
 }
 
 export function GithubAvatar() {
-  const { status, result, error } = useOptimisticUI<string>(() => fetchGithubAvatarURL(USERNAME), PREDICTED_AVATAR_URL)
+  const { status, result, error } = useOptimisticUI<string>(() => getGithubAvatarURL(USERNAME), PREDICTED_AVATAR_URL)
 
   if (status === 'failed') {
     // The "result" will be the predicted image passed to the hook
@@ -64,7 +64,7 @@ export function GithubAvatar() {
 
   return (
     <div>
-      <img src={result} />
+      <img src={result} alt="avatar" />
       <p>Status: {status}</p>
     </div>
   )
