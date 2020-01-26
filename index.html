@@ -68,7 +68,7 @@
 				<a href="#react-optimistic-ui-hook" id="react-optimistic-ui-hook" style="color: inherit; text-decoration: none;">
 					<h1>react-optimistic-ui-hook</h1>
 				</a>
-				<p>Minimal &quot;optimistic UI&quot; pattern implementation in a React hook.</p>
+				<p>Minimal &quot;optimistic UI&quot; pattern implementation in a React Hook.</p>
 				<a href="#what-is-quotoptimistic-uiquot" id="what-is-quotoptimistic-uiquot" style="color: inherit; text-decoration: none;">
 					<h2>What is &quot;Optimistic UI&quot;?</h2>
 				</a>
@@ -108,18 +108,18 @@ export function GithubAvatar() {
   const { status, result, error } = useOptimisticUI&lt;string&gt;(() =&gt; getGithubAvatarURL(USERNAME), PREDICTED_AVATAR_URL)
 
   if (status === &#39;failed&#39;) {
-    // The &quot;result&quot; will be the predicted image passed to the hook
+    // The &quot;result&quot; will be the predicted image url passed to the Hook,
     // But &quot;error&quot; is set to the raised error in the passed promise
-    console.error(&quot;Error fetching avatar URL!&quot;, error)
+    console.error(&quot;Failed to fetch image!&quot;, error)
   }
 
   if (status === &#39;loading&#39;) {
-    // The result will be the predicted image passed to the hook again!
+    // The &quot;result&quot; will be the predicted image passed to the Hook again!
     console.log(&#39;Loading image!&#39;)
   }
 
   if (status === &#39;succeed&#39;) {
-    // The result will be the resolved promise response here!
+    // The &quot;result&quot; will be the resolved promise response here!
     console.log(&quot;Resolved image!&quot;, result)
   }
 
