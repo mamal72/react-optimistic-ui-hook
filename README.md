@@ -2,7 +2,7 @@
 
 # react-optimistic-ui-hook
 
-Minimal "optimistic UI" pattern implementation in a React hook.
+Minimal "optimistic UI" pattern implementation in a React Hook.
 
 
 ## What is "Optimistic UI"?
@@ -52,18 +52,18 @@ export function GithubAvatar() {
   const { status, result, error } = useOptimisticUI<string>(() => getGithubAvatarURL(USERNAME), PREDICTED_AVATAR_URL)
 
   if (status === 'failed') {
-    // The "result" will be the predicted image passed to the hook
+    // The "result" will be the predicted image url passed to the Hook,
     // But "error" is set to the raised error in the passed promise
-    console.error("Error fetching avatar URL!", error)
+    console.error("Failed to fetch image!", error)
   }
 
   if (status === 'loading') {
-    // The result will be the predicted image passed to the hook again!
+    // The "result" will be the predicted image passed to the Hook again!
     console.log('Loading image!')
   }
 
   if (status === 'succeed') {
-    // The result will be the resolved promise response here!
+    // The "result" will be the resolved promise response here!
     console.log("Resolved image!", result)
   }
 
