@@ -44,7 +44,7 @@ async function getGithubAvatarURL(username: string): Promise<string> {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(data.avatar_url)
-    }, DELAY_MS);
+    }, DELAY_IN_MS);
   })
 }
 
