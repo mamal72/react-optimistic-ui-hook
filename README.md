@@ -1,8 +1,8 @@
-![NPM](https://img.shields.io/npm/l/react-optimistic-ui-hook) [![Build Status](https://travis-ci.com/mamal72/react-optimistic-ui-hook.svg?branch=master)](https://travis-ci.com/mamal72/react-optimistic-ui-hook) [![codecov](https://codecov.io/gh/mamal72/react-optimistic-ui-hook/branch/master/graph/badge.svg)](https://codecov.io/gh/mamal72/react-optimistic-ui-hook) ![David](https://img.shields.io/david/mamal72/react-optimistic-ui-hook) ![npm](https://img.shields.io/npm/v/react-optimistic-ui-hook) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-optimistic-ui-hook)
+![NPM](https://img.shields.io/npm/l/react-optimistic-ui-hook) [![Build Status](https://travis-ci.com/mamal72/react-optimistic-ui-hook.svg?branch=master)](https://travis-ci.com/mamal72/react-optimistic-ui-hook) [![codecov](https://codecov.io/gh/mamal72/react-optimistic-ui-hook/branch/master/graph/badge.svg)](https://codecov.io/gh/mamal72/react-optimistic-ui-hook) ![David](https://img.shields.io/david/mamal72/react-optimistic-ui-hook) ![npm](https://img.shields.io/npm/v/react-optimistic-ui-hook) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-optimistic-ui-hook) ![npm](https://img.shields.io/npm/dm/react-optimistic-ui-hook)
 
 # react-optimistic-ui-hook
 
-Minimal "optimistic UI" pattern implementation in a React Hook.
+Minimal zero dependency "optimistic UI" pattern implementation in a React Hook.
 
 
 ## What is "Optimistic UI"?
